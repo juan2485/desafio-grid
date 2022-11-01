@@ -1,0 +1,105 @@
+:root {
+  --orange: #ff9615;
+  --white: #ffffff;
+  --black: #000;
+  --gray: #e7e7e7;
+  --gray-oscuro: #9f9da0;
+  --calipso: #76d7c4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 30px auto;
+  background-color: var(--gray);
+  border: 1px solid var(--black);
+  display: grid;
+  grid-template-columns: 150px repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+    "header header header header"
+    "aside products products products"
+    "footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--calipso);
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.aside {
+  padding: 15px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-area: products;
+  gap: 30px;
+  padding: 30px;
+}
+
+.card {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  width: 100%;
+  background-color: var(--calipso);
+  color: var(--black);
+  padding: 10px;
+}
+
+button:hover {
+  background-color: var(--gray-oscuro);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.button_aside {
+  width: 120px;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 10px;
+  border: none;
+  text-align: left;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--white);
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
